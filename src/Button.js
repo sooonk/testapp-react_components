@@ -5,10 +5,10 @@ class App extends Component {
   
     render() {
     return (
-      <div onClick={this.props.handleClick}>
+      <button onClick={this.props.handleClick}>
       {this.props.text}
       
-      </div>
+      </button>
     );
   }
 }

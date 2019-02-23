@@ -3,6 +3,7 @@ import './App.css';
 import Button from './Button.js';
 import Header from './Header.js';
 import Footer from './Footer.js';
+import Menu from './menu.component';
 
 class App extends Component {
   constructor(props) {
@@ -31,28 +32,38 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+
+        <div className="container">
         <div className='header'>
-        <Header name="Licznik" /><br></br>
-        </div><br></br>
-        <div>Wartość licznika: {this.state.count}</div>
+
+          <Header name="Licznik" />
+        </div>
+        <div className="menu"><Menu /></div>
+        </div>
+
+        <div className="title">Wartość licznika: {this.state.count}</div>
+
         <div className='Button'>
           <Button
             text="Zwiększ wartość"
             handleClick={this.increaseState}
           /></div>
+
         <div className='Button'>
           <Button
             text="Zmniejsz wartość"
             handleClick={this.decraseState}
           /></div>
+
         <div className='Button'>
           <Button
             text="Restart"
             handleClick={this.setZero}
           />
         </div>
+
         <div className='footer'>
-        <Footer name='Author: Sonia' />
+          <Footer name='Author: Sonia' />
         </div>
       </div>
 
