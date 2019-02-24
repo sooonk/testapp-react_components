@@ -88,10 +88,16 @@ button{
 a{
   margin-right: 20px;
   top: 0;
+  background-color: black;
 }
 a:visited {
   color: whitesmoke;
 }
 a:hover {
   color: maroon;
+}
+footer{
+  float: right;
+  
+  margin: 20px;
 }

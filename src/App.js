@@ -4,6 +4,9 @@ import Button from './Button.js';
 import Header from './Header.js';
 import Footer from './Footer.js';
 import Menu from './menu.component';
+import UserList from './usersList.component'
+import { Link } from 'react-router-dom';
+
 
 class App extends Component {
   constructor(props) {
@@ -34,11 +37,11 @@ class App extends Component {
       <div className='App'>
 
         <div className="container">
-        <div className='header'>
+          <div className='header'>
 
-          <Header name="Licznik" />
-        </div>
-        <div className="menu"><Menu /></div>
+            <Header name="Licznik" />
+          </div>
+          <div className="menu"><Menu /></div>
         </div>
 
         <div className="title">Wartość licznika: {this.state.count}</div>
@@ -62,8 +65,12 @@ class App extends Component {
           />
         </div>
 
+        <UserList />
+
         <div className='footer'>
+          <div className='user'></div>
           <Footer name='Author: Sonia' />
+
         </div>
       </div>
 

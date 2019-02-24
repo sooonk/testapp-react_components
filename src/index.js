@@ -5,7 +5,9 @@ import './index.css';
 import App from './App';
 import Contact from './Contact';
 import AboutUs from './AboutUs';
+import Users from './Users';
 import * as serviceWorker from './serviceWorker';
+import UserList from './usersList.component';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -13,6 +15,10 @@ ReactDOM.render(
             <Route exact path='/' component={App} />
             <Route path='/about' component={AboutUs} />
             <Route path='/contact' component={Contact} />
+            <Route path="/user/:id" component={Users}/>
+            <Route path="/userdetails/:id/:name/:surname" component={UserList}/>
+
+
         </div>
     </BrowserRouter>,
     
